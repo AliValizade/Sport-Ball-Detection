@@ -17,6 +17,7 @@ def median_filter(image, kernel_size):
             kernel = padded_image[i - pad:i + pad + 1, j - pad:j + pad + 1]
             # Calculate the median value
             filtered_image[i - pad, j - pad] = np.median(kernel)
+            
     
     return filtered_image
 

@@ -3,7 +3,7 @@ import numpy as np
 
 
 # Using Hough Circle Transform to detect balls
-def detect_circles(image, dp=1.2, minDist=100, param1=150, param2=60, minRadius=15, maxRadius=1000):
+def detect_circles(image, dp=1.2, minDist=100, param1=150, param2=60, minRadius=35, maxRadius=1000):
     gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
     circles = cv2.HoughCircles(
         gray, 

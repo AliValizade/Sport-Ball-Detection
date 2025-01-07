@@ -10,7 +10,7 @@ from modules.hough_circle import draw_circles, detect_circles
 
 
 # Read image
-img = cv2.imread('img/noisy-color(1).jpg')
+img = cv2.imread('img/noisy-color(23).jpg')
 if img is None:
     print(f"Error reading image: ")
     
@@ -39,6 +39,7 @@ hist_h, hist_s, hist_v = calc_hsv_histogram(hsv_image)
 
 # Dominant color analysis
 color_features = dominant_color_analysis(hsv_image)
+print(color_features)
 
 # Image restoration (assumption: black areas have incomplete information)
 image = cv2.cvtColor(contrast_image, cv2.COLOR_GRAY2RGB)
